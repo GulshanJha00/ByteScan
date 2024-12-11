@@ -53,7 +53,7 @@ const Page = () => {
             <Image src={qrCode} height={100} width={100} alt="image"></Image>
           </div>
           :
-          <div className="hidden"></div>}
+          <Image src={`/Logo.png`} height={100} width={100} alt="image"></Image>}
       </div>
 
       </SignedIn>
