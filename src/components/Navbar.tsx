@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import Button from "./Button";
+import { UserButton } from "@clerk/nextjs";
+import Link from "next/link";
 // import Image from "next/image";
 
 const Navbar = () => {
@@ -11,14 +13,18 @@ const Navbar = () => {
         {/* Parent container for Image needs to have relative positioning */}
         <div className="flex justify-center items-center p-4 mx-5 lg:mx-14">
           {/* <Image src={"/Logo.png"} alt="logo" height={20} width={20} className="h-20 w-20 p-4 "/> */}
+          <Link href={"/"}>
+          
           <h1 className="font-bold lg:text-4xl text-lg">
             Byte<span className="text-blue-600">Scan</span>
           </h1>
+          </Link>
         </div>
         <div className="flex gap-4 justify-center items-center mx-14 ">
           <div className="hidden lg:flex">
-            <Button link="signin" title="Sign In" />
-            <Button link="signup" title="Sign Up" />
+            <Button link="getqr" title="Get QR" />
+            <Button link="about" title="About Us" />
+            <UserButton/>
           </div>
 
           <div
@@ -40,12 +46,18 @@ const Navbar = () => {
           {isOpen ? (
             <div className="absolute top-16 right-0 w-full">
               <ul className="block text-center w-full lg:hidden bg-gray-700">
-                <li>
-                  <Button link="signin" title="Sign In" />
+              <li>
+           <UserButton/>
+
                 </li>
                 <li>
-                  <Button link="signup" title="Sign Up" />
+                  
+                  <Button link="getqr" title="Get QR" />
                 </li>
+                <li>
+                  <Button link="about" title="About Us" />
+                </li>
+                
               </ul>
             </div>
           ) : (
