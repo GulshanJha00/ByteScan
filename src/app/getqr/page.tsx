@@ -4,14 +4,20 @@ import { SignedIn, SignedOut, SignIn } from '@clerk/nextjs'
 import QRCode from 'qrcode'
 
 
-const page = () => {
+const Page = () => {
   const [input, setInput] = useState('')
   
-  const generateQRCode = async (input:string) => {
+  const generateQRCode = async () => {
+    if (!input) {
+      alert('Please enter valid input!');
+      return;
+    }
     try {
-      console.log(await QRCode.toDataURL(input))
+      const qr = await QRCode.toDataURL(input);
+      
+      console.log(qr);
     } catch (err) {
-      console.error(err)
+      console.error(err);
     }
   }
 
@@ -52,4 +58,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
