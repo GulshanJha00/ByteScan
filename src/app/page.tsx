@@ -49,7 +49,7 @@ export default function Home() {
         </div>
 
         
-        <div className="bg-[#63baaa] flex flex-col items-center p-3 min-h-[300px]">
+        <div className="bg-[#63baaa] flex flex-col items-center  p-3 min-h-[300px]">
           
 
           {QrCode?
