@@ -22,7 +22,7 @@ const Navbar = () => {
         </div>
         <div className="flex gap-4 justify-center items-center mx-14 ">
           <div className="hidden lg:flex">
-            <Button link="save" title="Saved QR" />
+            <Button link="saved" title="Saved QR" />
             <Button link="about" title="About Us" />
             <button className="ml-4 hover:bg-[#63baaa] p-2 rounded-md"> <UserButton/>
               
@@ -55,7 +55,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   
-                  <Button link="save" title="Saved QR" />
+                  <Button link="aved" title="Saved QR" />
                 </li>
                 <li>
                   <Button link="about" title="About Us" />
